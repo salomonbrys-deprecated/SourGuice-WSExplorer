@@ -1,0 +1,28 @@
+<div>
+    <p id="version-header">
+        <label for="version">Version: </label>
+        <input type="text" id="version" ng-model="ctrl.version" />
+    </p>
+    <p id="filter-header">
+        <label for="filter">Filter: </label>
+        <input type="text" id="filter" ng-model="ctrl.search" ng-keydown="ctrl.keyDown($event)" ng-blur="ctrl.selection = -1" ng-focus="ctrl.focus()" />
+    </p>
+    <ul id="methods">
+        <li ng-repeat="endpoint in ctrl.endpointNames | filter_endpoint:ctrl.search:ctrl.description">
+            <h3 ng-click="ctrl.endpointClick(endpoint)">{{endpoint}}</h3>
+            <ul>
+                <li ng-repeat="method in ctrl.methodNamesIn(endpoint) | filter_method:ctrl.search:endpoint" id="method-{{endpoint}}-{{method}}">
+                    <a
+                        ng-class="{'selected': ctrl.isSelected(endpoint, method)}"
+                        ng-mouseover="ctrl.selection = -1"
+                        href="#/m/{{endpoint}}.{{method}}"
+                        data-endpoint="{{endpoint}}"
+                        data-method="{{method}}"
+                        >
+                        {{endpoint}}.<b>{{method}}</b>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,20 @@
+# Editors
+*~
+\#*\#
+
+# Mac
+.DS_Store
+
+# Eclipse
+.project
+.classpath
+.metadata/
+.settings/
+
+# IDEA
+.idea
+*.iml
+
+# Dart
+packages
+

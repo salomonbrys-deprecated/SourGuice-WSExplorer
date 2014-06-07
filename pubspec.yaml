@@ -1,0 +1,4 @@
+name: SourGuice-WS-Explorer
+dependencies:
+  browser: any
+  angular: ">=0.9.10 <0.10.0"

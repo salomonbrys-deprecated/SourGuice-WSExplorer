@@ -1,0 +1,11 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Cousine', monospace;
+    font-weight: normal;
+    font-size: 1.5em;
+}

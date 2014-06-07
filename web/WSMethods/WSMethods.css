@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    font-family: 'Cousine', monospace;
+    font-size: 1em;
+    border: none;
+    border-bottom: solid #6e767d 1px;
+    background: transparent;
+    color: white;
+    outline: none;
+    margin-left: 0.5em;
+    padding: 0 0.25em;
+}
+
+input:focus {
+    border-bottom: solid white 1px;
+}
+
+p#version-header {
+    border-bottom: solid #f0f8ff 2px;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    display: flex;
+}
+
+p#version-header input#version {
+    text-align: center;
+    flex: 1;
+    max-width: 5em;
+}
+
+p#filter-header {
+    display: flex;
+}
+
+p#filter-header input#filter {
+    flex: 1;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul h3 {
+    cursor: pointer;
+    border-bottom: solid transparent 1px;
+    margin-bottom: 2px;
+    font-weight: normal;
+}
+
+ul h3:hover {
+    border-bottom: solid white 1px;
+}
+
+ul#methods {
+    padding-top: 1em;
+    font-family: 'Cousine', monospace;
+}
+
+ul#methods li {
+    padding-top: 1em;
+}
+
+ul#methods ul li {
+    padding: 0 0 0 1em;
+    font-size: 0.7em;
+    cursor: pointer;
+}
+
+ul#methods ul li a {
+    display: inline-block;
+    min-width: 100%;
+    color: white;
+    text-decoration: none;
+}
+
+ul#methods ul li:hover a, ul#methods ul li a.selected {
+    background-color: #444b5c;
+}
+
+ul#methods ul li b {
+    font-size: 1.3em;
+    font-weight: normal;
+}
